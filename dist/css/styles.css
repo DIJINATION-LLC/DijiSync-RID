@@ -1,15 +1,5 @@
 @charset "UTF-8";
-/*!
-* Start Bootstrap - SB Admin v6.0.1 (https://startbootstrap.com/templates/sb-admin)
-* Copyright 2013-2020 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-sb-admin/blob/master/LICENSE)
-*/
-/*!
- * Bootstrap v4.5.0 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -6155,7 +6145,11 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #0E5DEE !important;
+  background: linear-gradient(336deg, rgb(255 255 255 / 25%), rgb(255 255 255 / 55%) 70.71%), url(../assets/img/bg1.jpg) no-repeat center fixed;
+  position: relative;
+  background-size: cover;
+  z-index: 1;
+}
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -10320,4 +10314,13 @@ body {
 }
 .sb-sidenav-light .sb-sidenav-footer {
   background-color: #e9ecef;
+}
+
+
+.diji-logo {
+ width: 12rem !important;
+}
+
+.diji-center-logo {
+ width: 15rem !important;
 }
