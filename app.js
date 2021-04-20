@@ -39,6 +39,13 @@ app.get('/arperf' , (req , res) => {
 
 app.use('/arperf', router);
 
+app.get('/password' , (req , res) => {
+  res.sendFile(path.join(__dirname+ '/dist/password.html'));
+
+ // app.use(express.static(__dirname + '/home'));
+})
+
+app.use('/password', router);
 
 
 
