@@ -47,7 +47,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="/">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
@@ -880,7 +880,904 @@
                     </div>
                 </footer>
             </div>
+        </div><!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="utf-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+            <meta name="description" content="" />
+            <meta name="author" content="" />
+            <title>Dashboard &mdash; DijiSync HCS</title>
+            <link rel="icon" href="fv.png" type="image/png" sizes="16x16">
+            <link href="css/styles.css" rel="stylesheet" />
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+            <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+        </head>
+        
+        <body class="sb-nav-fixed">
+            <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+               <a href="/" class="navbar-brand"><img src="Logo4.png" width="200px;" height="auto;" /></a>
+        
+        
+               <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
+               <!-- Navbar Search-->
+               <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ml-auto ml-md-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item" href="#">Activity Log</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/login">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="/">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Interface</div>
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Transaction Trend
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Charges
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="charbyins.html">Charges by Insurance</a>
+                                            <a class="nav-link" href="charbycpt.html">Charges by CPT Codes</a>
+                                            <a class="nav-link" href="charbyl.html">Charges by Location</a>
+                                            <a class="nav-link" href="charbyphy.html">Charges by Physician</a>
+                                        </nav>
+                                    </div>
+        
+                                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                        Payment
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="password.html">Payment by Insurance</a></a>
+                                            <a class="nav-link" href="404.html">Payment by CPT Codes</a>
+                                            <a class="nav-link" href="500.html">Payment by Location</a>
+                                            <a class="nav-link" href="500.html">Payment by Physician</a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                AR Summary
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="arperf.html">AR Performance</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">AR by Payor</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">Patient AR Aging</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">AR by Location</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">AR by Physician</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">AR by CPT Codes</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseD" aria-expanded="false" aria-controls="collapseD">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
+                                Denial Summary
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseD" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="layout-static.html">Top 5 denial reasons for the day</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">Denial by Frequency</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">Denial by Reason</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseC" aria-expanded="false" aria-controls="collapseC">
+                                <div class="sb-nav-link-icon"><i class="fas fa-address-card"></i></div>
+                                Custom Report
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseC" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="layout-static.html">KPI by Day</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">KPI by Week</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">KPI by Month</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">AR by Year</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Dr. John Doe
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid">
+                        <div class="d-sm-flex align-items-center justify-content-between mt-5">
+                            <h1 class="mb-0 text-gray-800">Welcome to Revenue Intelligence Dashboard</h1>
+                            <div class="btn-group btn-group-xs">
+                                <a href="#" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-sync-alt fa-sm text-white-50"></i> Refresh</a>
+                                <a href="#" class="ml-3 d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                            </div>
+                        </div>
+                        <ol class="breadcrumb mt-4">
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+        
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body"><i class="fas fa-address-card"></i>      Transaction Trend</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-warning text-white mb-4">
+                                    <div class="card-body">AR Summary</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="arperf.html">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-success text-white mb-4">
+                                    <div class="card-body">Denial Summary</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-danger text-white mb-4">
+                                    <div class="card-body">Custom Reports</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+        
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-pie mr-1"></i>
+                                        Pie Chart Example<div class="dropdown btn right btn-sm ">
+                                            <button class="dropbtn dropdown-toggle"><span data-feather="calendar"></span>Today</button>
+                                            <div class="dropdown-content">
+                                                <a href="#">Today</a>
+                                                <a href="#">This Week</a>
+                                                <a href="#">This Month</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body"><canvas id="myPieChart" width="100%" height="40"></canvas></div>
+                                    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-bar mr-1"></i>
+                                        Bar Chart Example<div class="dropdown btn right btn-sm ">
+                                            <button class="dropbtn dropdown-toggle"><span data-feather="calendar"></span>Today</button>
+                                            <div class="dropdown-content">
+                                                <a href="#">Today</a>
+                                                <a href="#">This Week</a>
+                                                <a href="#">This Month</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
+                                    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-mb-4">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fas fa-table mr-1"></i>
+                                    Charges by Physician<button type="button" class="btn right btn-sm btn-outline-secondary dropdown-toggle">
+                                        <span data-feather="calendar"></span>
+                                        This week
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Physician</th>
+                                                    <th>Today</th>
+                                                    <th>Last Week</th>
+                                                    <th>Last Month</th>
+        
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>Physician</th>
+                                                    <th>Today</th>
+                                                    <th>Last Week</th>
+                                                    <th>Last Month</th>
+        
+        
+                                                </tr>
+                                            </tfoot>
+                                            <tbody>
+        
+                                                <tr>
+                                                    <td>Cally Berry</td>
+                                                    <td>$14.97</td>
+                                                    <td>$787.62</td>
+                                                    <td>$4954.04</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Octavia Callahan</td>
+                                                    <td>$55.65</td>
+                                                    <td>$444.74</td>
+                                                    <td>$2736.47</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dustin Hicks</td>
+                                                    <td>$86.05</td>
+                                                    <td>$990.23</td>
+                                                    <td>$2196.48</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Gabriel Beard</td>
+                                                    <td>$9.10</td>
+                                                    <td>$535.27</td>
+                                                    <td>$1963.93</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Idona Morris</td>
+                                                    <td>$2.33</td>
+                                                    <td>$829.39</td>
+                                                    <td>$2420.20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Palmer Manning</td>
+                                                    <td>$10.06</td>
+                                                    <td>$658.24</td>
+                                                    <td>$4952.48</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Aaron Hickman</td>
+                                                    <td>$87.73</td>
+                                                    <td>$144.27</td>
+                                                    <td>$2578.03</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Lucy Kline</td>
+                                                    <td>$57.16</td>
+                                                    <td>$906.51</td>
+                                                    <td>$3078.75</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Xavier Ware</td>
+                                                    <td>$25.14</td>
+                                                    <td>$571.72</td>
+                                                    <td>$1896.93</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Kim Clay</td>
+                                                    <td>$82.36</td>
+                                                    <td>$465.29</td>
+                                                    <td>$1427.66</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dale Cummings</td>
+                                                    <td>$9.06</td>
+                                                    <td>$999.09</td>
+                                                    <td>$2146.39</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Amery Holder</td>
+                                                    <td>$57.59</td>
+                                                    <td>$599.39</td>
+                                                    <td>$1820.84</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sharon Boone</td>
+                                                    <td>$88.08</td>
+                                                    <td>$290.52</td>
+                                                    <td>$3317.41</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Lucy Moon</td>
+                                                    <td>$53.65</td>
+                                                    <td>$966.48</td>
+                                                    <td>$1918.47</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Burke Pruitt</td>
+                                                    <td>$7.20</td>
+                                                    <td>$198.66</td>
+                                                    <td>$1864.97</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Raphael Guzman</td>
+                                                    <td>$21.06</td>
+                                                    <td>$177.68</td>
+                                                    <td>$3675.35</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Murphy Griffin</td>
+                                                    <td>$32.51</td>
+                                                    <td>$592.65</td>
+                                                    <td>$3593.14</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ruth Clay</td>
+                                                    <td>$2.06</td>
+                                                    <td>$893.23</td>
+                                                    <td>$3638.31</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Aurora Green</td>
+                                                    <td>$39.38</td>
+                                                    <td>$866.63</td>
+                                                    <td>$1254.33</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Julie Foreman</td>
+                                                    <td>$46.29</td>
+                                                    <td>$481.08</td>
+                                                    <td>$1704.76</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jordan Keller</td>
+                                                    <td>$38.22</td>
+                                                    <td>$822.43</td>
+                                                    <td>$4702.59</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Maryam Cohen</td>
+                                                    <td>$94.93</td>
+                                                    <td>$736.75</td>
+                                                    <td>$4128.76</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ahmed Williams</td>
+                                                    <td>$32.73</td>
+                                                    <td>$447.12</td>
+                                                    <td>$2146.85</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Price Fleming</td>
+                                                    <td>$94.89</td>
+                                                    <td>$387.69</td>
+                                                    <td>$3232.46</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Echo Kemp</td>
+                                                    <td>$24.62</td>
+                                                    <td>$943.66</td>
+                                                    <td>$3949.32</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sylvester Small</td>
+                                                    <td>$9.91</td>
+                                                    <td>$626.38</td>
+                                                    <td>$1661.39</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Levi Dominguez</td>
+                                                    <td>$10.14</td>
+                                                    <td>$279.37</td>
+                                                    <td>$1624.27</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Berk Hurst</td>
+                                                    <td>$75.10</td>
+                                                    <td>$509.15</td>
+                                                    <td>$2131.64</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Michael Kirkland</td>
+                                                    <td>$99.12</td>
+                                                    <td>$302.16</td>
+                                                    <td>$4814.64</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Chadwick Gomez</td>
+                                                    <td>$16.12</td>
+                                                    <td>$344.55</td>
+                                                    <td>$2387.75</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sigourney Rowe</td>
+                                                    <td>$58.89</td>
+                                                    <td>$927.47</td>
+                                                    <td>$4708.37</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Yardley Wallace</td>
+                                                    <td>$22.55</td>
+                                                    <td>$314.99</td>
+                                                    <td>$3870.84</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Odette Sandoval</td>
+                                                    <td>$17.01</td>
+                                                    <td>$843.94</td>
+                                                    <td>$4533.05</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fitzgerald Hays</td>
+                                                    <td>$82.79</td>
+                                                    <td>$504.25</td>
+                                                    <td>$3797.55</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Travis Matthews</td>
+                                                    <td>$31.23</td>
+                                                    <td>$806.96</td>
+                                                    <td>$1493.11</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Rashad Castillo</td>
+                                                    <td>$43.69</td>
+                                                    <td>$592.44</td>
+                                                    <td>$2328.60</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Zahir Butler</td>
+                                                    <td>$66.59</td>
+                                                    <td>$545.36</td>
+                                                    <td>$2933.36</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Declan Steele</td>
+                                                    <td>$58.98</td>
+                                                    <td>$194.91</td>
+                                                    <td>$2600.31</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cameron Chase</td>
+                                                    <td>$9.11</td>
+                                                    <td>$574.37</td>
+                                                    <td>$1515.21</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Hasad Koch</td>
+                                                    <td>$64.06</td>
+                                                    <td>$812.13</td>
+                                                    <td>$3731.16</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Evangeline Henderson</td>
+                                                    <td>$30.00</td>
+                                                    <td>$435.18</td>
+                                                    <td>$2253.68</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Riley Mcdonald</td>
+                                                    <td>$14.09</td>
+                                                    <td>$239.43</td>
+                                                    <td>$4089.34</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Megan Butler</td>
+                                                    <td>$53.00</td>
+                                                    <td>$496.71</td>
+                                                    <td>$3719.33</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Casey Williams</td>
+                                                    <td>$15.26</td>
+                                                    <td>$742.40</td>
+                                                    <td>$1378.21</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tad Mcleod</td>
+                                                    <td>$16.84</td>
+                                                    <td>$486.09</td>
+                                                    <td>$4711.12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fitzgerald Washington</td>
+                                                    <td>$66.38</td>
+                                                    <td>$961.70</td>
+                                                    <td>$4243.73</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Hilary Waters</td>
+                                                    <td>$5.69</td>
+                                                    <td>$382.79</td>
+                                                    <td>$3740.13</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Orlando Lott</td>
+                                                    <td>$85.63</td>
+                                                    <td>$144.30</td>
+                                                    <td>$1772.78</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bryar Adkins</td>
+                                                    <td>$59.81</td>
+                                                    <td>$889.99</td>
+                                                    <td>$4595.14</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Laith Pickett</td>
+                                                    <td>$98.93</td>
+                                                    <td>$412.01</td>
+                                                    <td>$3775.93</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Rashad Douglas</td>
+                                                    <td>$77.19</td>
+                                                    <td>$436.32</td>
+                                                    <td>$1201.32</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Xanthus Peters</td>
+                                                    <td>$55.99</td>
+                                                    <td>$837.27</td>
+                                                    <td>$4647.73</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Blaine Rose</td>
+                                                    <td>$57.61</td>
+                                                    <td>$532.59</td>
+                                                    <td>$1860.61</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Oliver Kelley</td>
+                                                    <td>$53.93</td>
+                                                    <td>$557.62</td>
+                                                    <td>$1654.79</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Hall Jimenez</td>
+                                                    <td>$15.19</td>
+                                                    <td>$856.58</td>
+                                                    <td>$3401.26</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bradley Rose</td>
+                                                    <td>$36.24</td>
+                                                    <td>$512.13</td>
+                                                    <td>$3262.09</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Lynn Humphrey</td>
+                                                    <td>$81.03</td>
+                                                    <td>$666.09</td>
+                                                    <td>$2539.19</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Emerald Hoffman</td>
+                                                    <td>$22.91</td>
+                                                    <td>$789.58</td>
+                                                    <td>$4227.38</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Rose Sampson</td>
+                                                    <td>$72.13</td>
+                                                    <td>$466.67</td>
+                                                    <td>$2310.90</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Debra Dillon</td>
+                                                    <td>$11.45</td>
+                                                    <td>$579.69</td>
+                                                    <td>$3744.06</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Keiko Guy</td>
+                                                    <td>$85.09</td>
+                                                    <td>$159.36</td>
+                                                    <td>$2674.07</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Kevyn Browning</td>
+                                                    <td>$28.18</td>
+                                                    <td>$721.53</td>
+                                                    <td>$4574.39</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Whoopi Sandoval</td>
+                                                    <td>$1.93</td>
+                                                    <td>$352.66</td>
+                                                    <td>$3224.56</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Diana Lara</td>
+                                                    <td>$46.10</td>
+                                                    <td>$768.38</td>
+                                                    <td>$3394.88</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Chase Caldwell</td>
+                                                    <td>$67.87</td>
+                                                    <td>$488.23</td>
+                                                    <td>$3264.65</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Juliet Woodard</td>
+                                                    <td>$63.02</td>
+                                                    <td>$130.39</td>
+                                                    <td>$3902.40</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Justina Miranda</td>
+                                                    <td>$21.64</td>
+                                                    <td>$618.96</td>
+                                                    <td>$4029.05</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Warren Trevino</td>
+                                                    <td>$40.91</td>
+                                                    <td>$383.82</td>
+                                                    <td>$4653.87</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Wyoming Dixon</td>
+                                                    <td>$17.59</td>
+                                                    <td>$988.80</td>
+                                                    <td>$3244.82</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Serina Hahn</td>
+                                                    <td>$56.95</td>
+                                                    <td>$762.51</td>
+                                                    <td>$3617.64</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jana Noble</td>
+                                                    <td>$85.76</td>
+                                                    <td>$982.67</td>
+                                                    <td>$4875.19</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ivana Cruz</td>
+                                                    <td>$55.79</td>
+                                                    <td>$308.16</td>
+                                                    <td>$1215.46</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Chancellor Mosley</td>
+                                                    <td>$37.99</td>
+                                                    <td>$949.01</td>
+                                                    <td>$4729.54</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Murphy Moss</td>
+                                                    <td>$9.69</td>
+                                                    <td>$631.46</td>
+                                                    <td>$1910.76</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Shad Workman</td>
+                                                    <td>$33.97</td>
+                                                    <td>$161.81</td>
+                                                    <td>$2567.87</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Rudyard Boyd</td>
+                                                    <td>$48.64</td>
+                                                    <td>$276.49</td>
+                                                    <td>$3420.71</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fredericka Cannon</td>
+                                                    <td>$99.93</td>
+                                                    <td>$539.84</td>
+                                                    <td>$4777.21</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Constance Anthony</td>
+                                                    <td>$97.17</td>
+                                                    <td>$990.77</td>
+                                                    <td>$1172.51</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Nathaniel Landry</td>
+                                                    <td>$64.53</td>
+                                                    <td>$482.68</td>
+                                                    <td>$2083.20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Wyatt Todd</td>
+                                                    <td>$86.79</td>
+                                                    <td>$949.41</td>
+                                                    <td>$1834.46</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Leroy Odom</td>
+                                                    <td>$6.02</td>
+                                                    <td>$665.55</td>
+                                                    <td>$1910.81</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Flavia Booth</td>
+                                                    <td>$7.43</td>
+                                                    <td>$758.83</td>
+                                                    <td>$4156.18</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Hoyt Williams</td>
+                                                    <td>$1.14</td>
+                                                    <td>$913.74</td>
+                                                    <td>$4426.23</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Denise Moss</td>
+                                                    <td>$59.80</td>
+                                                    <td>$274.72</td>
+                                                    <td>$4263.90</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ulysses Good</td>
+                                                    <td>$28.86</td>
+                                                    <td>$505.87</td>
+                                                    <td>$3561.42</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Yardley Lynn</td>
+                                                    <td>$43.60</td>
+                                                    <td>$706.44</td>
+                                                    <td>$2878.22</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Michael Juarez</td>
+                                                    <td>$35.62</td>
+                                                    <td>$165.14</td>
+                                                    <td>$2590.15</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Lucas Soto</td>
+                                                    <td>$27.63</td>
+                                                    <td>$237.73</td>
+                                                    <td>$1009.29</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Nayda Carey</td>
+                                                    <td>$84.46</td>
+                                                    <td>$720.93</td>
+                                                    <td>$4634.12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dillon Valdez</td>
+                                                    <td>$95.91</td>
+                                                    <td>$993.36</td>
+                                                    <td>$3623.78</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Yetta Conley</td>
+                                                    <td>$13.65</td>
+                                                    <td>$739.62</td>
+                                                    <td>$1255.25</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dorian Gould</td>
+                                                    <td>$34.55</td>
+                                                    <td>$239.33</td>
+                                                    <td>$4662.78</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Vernon Perez</td>
+                                                    <td>$38.47</td>
+                                                    <td>$780.66</td>
+                                                    <td>$3969.34</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Mikayla Wells</td>
+                                                    <td>$79.46</td>
+                                                    <td>$657.47</td>
+                                                    <td>$1926.24</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Roth Haynes</td>
+                                                    <td>$21.14</td>
+                                                    <td>$428.35</td>
+                                                    <td>$3884.89</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sybil Hopkins</td>
+                                                    <td>$89.57</td>
+                                                    <td>$430.56</td>
+                                                    <td>$1146.18</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Burton Ortega</td>
+                                                    <td>$60.66</td>
+                                                    <td>$224.69</td>
+                                                    <td>$1976.27</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jacqueline Cruz</td>
+                                                    <td>$35.64</td>
+                                                    <td>$968.60</td>
+                                                    <td>$3778.63</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tasha Robertson</td>
+                                                    <td>$42.07</td>
+                                                    <td>$183.73</td>
+                                                    <td>$4248.58</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Quintessa Willis</td>
+                                                    <td>$70.04</td>
+                                                    <td>$339.81</td>
+                                                    <td>$2521.97</td>
+                                                </tr>
+                                            </table>
+        
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted"> &copy; 2021 DijiSync HCS LLC. All Rights Reserved</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-pie-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/datatables-demo.js"></script>
+        </body>
+        </html>
+        
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
