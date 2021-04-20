@@ -31,6 +31,14 @@ app.get('/register' , (req , res) => {
 
 app.use('/register', router);
 
+app.get('/arperf' , (req , res) => {
+  res.sendFile(path.join(__dirname+ '/dist/arperf.html'));
+
+ // app.use(express.static(__dirname + '/home'));
+})
+
+app.use('/arperf', router);
+
 
 
 
