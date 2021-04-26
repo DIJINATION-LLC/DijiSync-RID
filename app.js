@@ -49,6 +49,6 @@ app.use('/password', router);
 
 
 
-app.listen(3000,function(){
+app.listen(process.env.PORT || 3001,function(){
     console.log("server has started")
    })
