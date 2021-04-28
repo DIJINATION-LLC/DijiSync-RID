@@ -4,7 +4,6 @@ $(document).ready(function () {
     $.get(`${_baseUrl}/charges-by-physicians`,(data, status)=> {
         console.log(status);
         const tableBody = $('#t-data')
-        console.log(data)
         data.forEach(item => {
             tableBody.append(`
             <tr>
