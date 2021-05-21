@@ -394,17 +394,17 @@
                     
                 </div>
                 <div class="modal-body">
-                    <!-- Form -->
+                     Form
                     <form method='post' action='' enctype="multipart/form-data">
-                        Select a relevant file : <input type='file' name='file' id='file' class='form-control' ><br>
-                        <input type='button' class='btn btn-up' value='Upload' id='btn_upload'>
+                        Select a relevant file : <input type='file' name='file' id='myFileCharges' class='form-control' ><br>
+                        <input type='button' class='btn btn-up' value='Upload File' id='btnInsuranceCharges'>
                     </form>
 
                     <!-- Preview-->
                     <div id='preview'></div>
                 </div>
                 
-            </div>
+            </div> 
 
           </div>
         </div>
@@ -415,7 +415,7 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
-                                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <table class="table table-bordered" id="table" width="100%" cellspacing="0">
                                             <thead>
                                                 <tr>
                                                     <th>Insurance</th>
@@ -434,7 +434,7 @@
                                                     <th>Provider</th>
                                                 </tr>
                                             </tfoot>
-                                            <tbody id="t-data">
+                                            <tbody id="charge-data">
                                                
                                               
                                             </table>
@@ -498,8 +498,8 @@
         <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
         <script src="assets/demo/datatables-demo.js"></script>
-        <script src="/repository/getCalls.js"></script>
         <script src="/repository/postCalls.js"></script>
+        <script src="/repository/getCharges.js"></script>
         </body>
         </html>
         

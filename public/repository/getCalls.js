@@ -10,8 +10,8 @@ $(document).ready(function () {
             <td>${item.ClaimId}</td>
             <td>${item.Patient + ", " + item.patientLastName}</td>
             <td>${item.DOS}</td>
-            <td>${item.Charges}</td>
-            <td>${item.PaidAmt}</td>
+            <td>$${item.Charges}</td>
+            <td>$${item.PaidAmt}</td>
             <td>${item.Provider + ", " + item.providerLastName}</td>
             <td>${item.Location}</td>
         </tr>

@@ -11,6 +11,7 @@
         "clean": "node scripts/clean.js",
         "start": "npm run build && node scripts/start.js",
         "start:debug": "npm run build && node scripts/start-debug.js"
+        
     },
     "description": "A free admin dashboard template based on Bootstrap 4, created by Start Bootstrap.",
     "keywords": [

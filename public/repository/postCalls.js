@@ -57,14 +57,13 @@ $(document).ready(function () {
 
     $('#btnFile').click(function (e) {
 
-        console.log("Hello")
+        console.log("Charges by physican")
         
         var file = document.getElementById('myFile').files[0];
         console.log(file);
         const fileData = new FormData()
         fileData.append('files' , file)
         $.ajax({
-
             processData: false,
             contentType: false,
             cache: false,
@@ -92,55 +91,39 @@ $(document).ready(function () {
 
         
             e.preventDefault()
+    })
 
+    $('#btnInsuranceCharges').click(function (e) {
+
+        console.log("Insurance Charges by physican")
+        
+        var file = document.getElementById('myFileCharges').files[0];
+        console.log(file);
+        const fileData = new FormData()
+        fileData.append('files' , file)
+        $.ajax({
+            processData: false,
+            contentType: false,
+            cache: false,
+            enctype: 'multipart/form-data',
+            type: "post",
+            url: `${_baseUrl}/upload`,
+            data: fileData,
+            success: function (data) {
+                $.post(`${_baseUrl}/insurance-charges-by-physicians/upload`, {data}, (d, status) => {
+                    console.log(status);
+                    console.log(d.body);
+                    if (status == "success") {
+                       console.log("Second Call success");
+                    }
+                })
+            },
+            error: function (data) {
+                console.log('Error:', data);
+            }
+        })
+        e.preventDefault()
+    })
 
 
 })
-})
-
-
-
-    // const workSheetsFromFile = xlsx.parse(`${__dirname}/Charges Apr.xls`, { cellDates: true, dateNF: 'dd/mm/yy', cellStyles: true });
-
-    // var rows = [];
-    // var writeStr = "";
-
-    // //looping through all sheets
-    // for (var i = 0; i < workSheetsFromFile.length; i++) {
-    //     var sheet = workSheetsFromFile[i];
-    //     //loop through all rows in the sheet
-    //     for (var j = 0; j < sheet['data'].length; j++) {
-    //         //add the row to the rows array
-    //         rows.push(sheet['data'][j]);
-    //     }
-    // }
-
-    // //creates the csv string to write it to a file
-    // for (var i = 0; i < rows.length; i++) {
-    //     if (i == 0) {
-    //         rows[0].splice(3, 0, 'patientLastName')
-    //         rows[0].splice(9, 0, 'providerLastName')
-    //         writeStr += rows[i].join(",") + "\n";
-    //     } else {
-    //         writeStr += rows[i].join(",") + "\n";
-    //     }
-    // }
-
-    // console.log(writeStr);
-
-    // var file = document.getElementById('myFile').files[0];
-    // if (file) {
-    //   var reader = new FileReader();
-
-    //   reader.onload = function (e) {
-    //     var data = e.target.result;
-    //                  var workbook = XLSX.read(data, {//XLSX.read() method will return a workbook object
-    //       type: 'binary'
-    //     });
-    //     readWorkbook(workbook);
-    //   };
-    //   reader.readAsBinaryString(file);
-
-    // } else {
-    //              alert('Please select the file first');
-    // }

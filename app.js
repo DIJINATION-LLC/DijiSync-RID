@@ -47,6 +47,14 @@ app.get('/password' , (req , res) => {
 
 app.use('/password', router);
 
+app.get('/charges' , (req , res) => {
+  res.sendFile(path.join(__dirname+ '/dist/charges.html'));
+
+ // app.use(express.static(__dirname + '/home'));
+})
+
+app.use('/charges', router);
+
 
 
 app.listen(process.env.PORT || 3001,function(){
