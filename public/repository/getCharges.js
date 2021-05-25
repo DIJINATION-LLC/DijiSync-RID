@@ -10,7 +10,7 @@ $(document).ready(function () {
             <td>${item.Insurance}</td>
             <td>${item.DOS}</td>
             <td>$${item.BilledAmount}</td>
-            <td>$${item.Status}</td>
+            <td>${item.Status}</td>
             <td>${item.Provider}</td>
         </tr>
             `)
