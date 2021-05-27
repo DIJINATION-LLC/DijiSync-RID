@@ -10331,28 +10331,3 @@ body {
 .diji-center-logo {
  width: 15rem !important;
 }
-
-#uploadModal {
-  color: #000;
-}
-
-#uploadModal .fa{
-  color: #000;
-}
-
-.btn-up{
-  background-color: #083CA3 !important;
-  border-color: #083CA3;
-  color: #fff;
-}
-
-.btn-up:hover{
-  background-color: #fff !important;
-  border-color: #083CA3;
-  border-width: 0.15rem;
-  color: #083CA3;
-}
-/* .btn{
-  background-color: #fff;
-  border-color: #fff;
-} */
